@@ -29,6 +29,10 @@ for (const leadForm of leadForms) {
       message ? `Задача: ${message}` : ''
     ].filter(Boolean).join('\n');
 
-    window.location.href = `https://wa.me/79324207085?text=${encodeURIComponent(text)}`;
+    if (navigator.clipboard && navigator.clipboard.writeText) {
+      navigator.clipboard.writeText(text).catch(() => {});
+    }
+
+    window.location.href = 'https://t.me/+79324207085';
   });
 }
