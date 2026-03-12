@@ -3,495 +3,256 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Раджик | Инженер-проектировщик ОВиК и ВК</title>
-  <meta name="description" content="Раджик — инженер-проектировщик ОВиК и ВК в Нижневартовске. Проектирование отопления, вентиляции, кондиционирования, водоснабжения и канализации.">
-  <meta name="theme-color" content="#081120">
+  <title>Раджик | Проектирование ОВиК и ВК в Нижневартовске</title>
+  <meta name="description" content="Раджик — инженер-проектировщик ОВиК и ВК в Нижневартовске. Проекты отопления, вентиляции, кондиционирования, водоснабжения и канализации для частных и коммерческих объектов.">
+  <meta name="theme-color" content="#f4f0e8">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;700;800&display=swap" rel="stylesheet">
-  <style>
-    :root {
-      --bg: #081120;
-      --panel: rgba(15, 23, 42, 0.78);
-      --line: rgba(148, 163, 184, 0.18);
-      --text: #e5eefc;
-      --muted: #94a3b8;
-      --accent: #38bdf8;
-      --accent-2: #22c55e;
-      --white: #fff;
-      --shadow: 0 24px 60px rgba(2, 8, 23, 0.32);
-      --radius: 24px;
-      --max: 1180px;
-    }
-
-    * { box-sizing: border-box; }
-    html { scroll-behavior: smooth; }
-    body {
-      margin: 0;
-      font-family: "Manrope", sans-serif;
-      color: var(--text);
-      background:
-        radial-gradient(circle at top left, rgba(56, 189, 248, 0.16), transparent 30%),
-        radial-gradient(circle at right 20%, rgba(34, 197, 94, 0.10), transparent 18%),
-        linear-gradient(180deg, #07101c 0%, #0b1220 100%);
-      line-height: 1.6;
-    }
-
-    a { color: inherit; text-decoration: none; }
-    .container { width: min(calc(100% - 32px), var(--max)); margin: 0 auto; }
-
-    .header {
-      position: sticky;
-      top: 0;
-      z-index: 20;
-      backdrop-filter: blur(14px);
-      background: rgba(8, 17, 32, 0.72);
-      border-bottom: 1px solid rgba(148, 163, 184, 0.08);
-    }
-
-    .header-inner {
-      min-height: 78px;
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      gap: 20px;
-    }
-
-    .brand { display: grid; gap: 2px; }
-    .brand-title { font-size: 1.15rem; font-weight: 800; letter-spacing: 0.03em; }
-    .brand-subtitle { font-size: 0.88rem; color: var(--muted); }
-
-    .nav {
-      display: flex;
-      gap: 18px;
-      flex-wrap: wrap;
-    }
-
-    .nav a {
-      color: var(--muted);
-      transition: color 0.2s ease;
-    }
-
-    .nav a:hover { color: var(--white); }
-
-    .hero { padding: 72px 0 34px; }
-    .hero-grid,
-    .about-grid,
-    .contacts-grid {
-      display: grid;
-      grid-template-columns: 1.15fr 0.85fr;
-      gap: 20px;
-    }
-
-    .panel,
-    .card {
-      background: var(--panel);
-      border: 1px solid var(--line);
-      border-radius: var(--radius);
-      box-shadow: var(--shadow);
-    }
-
-    .panel { padding: 40px; }
-    .card { padding: 28px; }
-
-    .eyebrow {
-      display: inline-flex;
-      align-items: center;
-      gap: 10px;
-      padding: 9px 14px;
-      border-radius: 999px;
-      background: rgba(14, 165, 233, 0.10);
-      border: 1px solid rgba(56, 189, 248, 0.25);
-      color: #b7e9fb;
-      font-size: 0.92rem;
-      margin-bottom: 18px;
-    }
-
-    h1 {
-      margin: 0 0 16px;
-      font-size: clamp(2.3rem, 5vw, 4.6rem);
-      line-height: 0.98;
-      letter-spacing: -0.04em;
-    }
-
-    h2 {
-      margin: 0 0 8px;
-      font-size: clamp(1.7rem, 3vw, 2.6rem);
-      letter-spacing: -0.03em;
-    }
-
-    p { margin: 0; color: #d7e1ef; }
-    .hero-text { max-width: 720px; font-size: 1.05rem; }
-
-    .hero-actions {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 14px;
-      margin-top: 28px;
-    }
-
-    .btn {
-      display: inline-flex;
-      align-items: center;
-      justify-content: center;
-      gap: 10px;
-      padding: 14px 22px;
-      border-radius: 16px;
-      font-weight: 800;
-      border: 1px solid transparent;
-      transition: transform 0.2s ease, border-color 0.2s ease;
-    }
-
-    .btn:hover { transform: translateY(-2px); }
-    .btn-primary { background: linear-gradient(135deg, #0ea5e9, #38bdf8); color: #03111d; }
-    .btn-success { background: linear-gradient(135deg, #16a34a, #22c55e); color: #04130a; }
-    .btn-secondary { background: rgba(15, 23, 42, 0.65); color: var(--white); border-color: rgba(148, 163, 184, 0.22); }
-
-    .stat {
-      font-size: 3rem;
-      line-height: 1;
-      font-weight: 800;
-      color: var(--accent);
-      margin-bottom: 8px;
-    }
-
-    .muted { color: var(--muted); }
-    .stack { display: grid; gap: 18px; }
-
-    .list,
-    .ticks,
-    .contact-list {
-      margin: 0;
-      padding: 0;
-      list-style: none;
-      display: grid;
-      gap: 12px;
-    }
-
-    .list li,
-    .contact-list li {
-      display: flex;
-      gap: 12px;
-      align-items: flex-start;
-    }
-
-    .dot {
-      width: 10px;
-      height: 10px;
-      border-radius: 50%;
-      background: var(--accent);
-      margin-top: 8px;
-      flex: 0 0 auto;
-    }
-
-    .ticks li::before {
-      content: "✓";
-      color: var(--accent-2);
-      font-weight: 800;
-      margin-right: 10px;
-    }
-
-    .section { padding: 18px 0; }
-    .section-head { margin-bottom: 22px; }
-    .section-head p { max-width: 760px; color: var(--muted); }
-
-    .grid-5 {
-      display: grid;
-      grid-template-columns: repeat(5, 1fr);
-      gap: 16px;
-    }
-
-    .item {
-      padding: 22px;
-      border-radius: 18px;
-      background: rgba(15, 23, 42, 0.72);
-      border: 1px solid rgba(148, 163, 184, 0.16);
-      min-height: 176px;
-    }
-
-    .icon {
-      width: 46px;
-      height: 46px;
-      border-radius: 14px;
-      display: inline-flex;
-      align-items: center;
-      justify-content: center;
-      margin-bottom: 14px;
-      background: rgba(56, 189, 248, 0.1);
-      border: 1px solid rgba(56, 189, 248, 0.18);
-      color: var(--accent);
-      font-weight: 800;
-    }
-
-    .item strong {
-      display: block;
-      margin-bottom: 10px;
-      color: var(--white);
-    }
-
-    .item p { color: var(--muted); font-size: 0.96rem; }
-    .label { display: block; color: var(--muted); font-size: 0.85rem; margin-bottom: 4px; }
-    .value { color: var(--white); font-weight: 700; }
-
-    .footer {
-      padding: 30px 0 88px;
-      color: var(--muted);
-    }
-
-    .footer-inner {
-      display: flex;
-      justify-content: space-between;
-      gap: 16px;
-      flex-wrap: wrap;
-    }
-
-    .floating-contact {
-      position: fixed;
-      right: 18px;
-      bottom: 18px;
-      z-index: 30;
-      display: inline-flex;
-      align-items: center;
-      justify-content: center;
-      padding: 14px 18px;
-      border-radius: 999px;
-      background: linear-gradient(135deg, #0ea5e9, #22c55e);
-      color: #04101a;
-      font-weight: 800;
-      box-shadow: 0 18px 34px rgba(14, 165, 233, 0.24);
-    }
-
-    @media (max-width: 1100px) {
-      .hero-grid,
-      .about-grid,
-      .contacts-grid,
-      .grid-5 { grid-template-columns: repeat(2, 1fr); }
-      .hero-grid,
-      .about-grid,
-      .contacts-grid { grid-template-columns: 1fr; }
-    }
-
-    @media (max-width: 760px) {
-      .header-inner { flex-direction: column; align-items: flex-start; padding: 14px 0; }
-      .hero { padding-top: 42px; }
-      .panel, .card { padding: 24px; }
-      .grid-5 { grid-template-columns: 1fr; }
-      .hero-actions { flex-direction: column; }
-      .btn { width: 100%; }
-      .floating-contact { right: 12px; left: 12px; }
-    }
-  </style>
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=Space+Grotesk:wght@500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-  <header class="header">
-    <div class="container header-inner">
-      <div class="brand">
-        <span class="brand-title">Раджик</span>
-        <span class="brand-subtitle">Инженер-проектировщик ОВиК и ВК</span>
+  <header class="site-header">
+    <div class="topbar">
+      <div class="container topbar-inner">
+        <p>Нижневартовск • ОВиК и ВК • Проектирование под реальные объекты</p>
+        <a href="tel:+79324207085">+7 932 420-70-85</a>
       </div>
-      <nav class="nav">
-        <a href="#about">О специалисте</a>
-        <a href="#services">Услуги</a>
-        <a href="#advantages">Преимущества</a>
-        <a href="#steps">Этапы работы</a>
-        <a href="#contacts">Контакты</a>
+    </div>
+    <div class="container nav-shell">
+      <a class="brand" href="index.html">
+        <span class="brand-mark">R</span>
+        <span>
+          <strong>Раджик</strong>
+          <small>Инженер-проектировщик ОВиК и ВК</small>
+        </span>
+      </a>
+      <button class="menu-toggle" type="button" aria-label="Открыть меню">Меню</button>
+      <nav class="site-nav">
+        <a class="active" href="index.html">Главная</a>
+        <a href="services.html">Услуги</a>
+        <a href="portfolio.html">Портфолио</a>
+        <a href="contacts.html">Контакты</a>
       </nav>
+      <a class="header-cta" href="contacts.html#lead-form">Оставить заявку</a>
     </div>
   </header>
 
   <main>
-    <section class="hero">
+    <section class="hero hero-home">
       <div class="container hero-grid">
-        <div class="panel">
-          <div class="eyebrow">Нижневартовск · проектирование инженерных систем</div>
-          <h1>Раджик — инженер-проектировщик ОВиК и ВК</h1>
+        <div class="hero-copy card soft-card">
+          <p class="eyebrow">Инженерные решения без перегруза и хаоса</p>
+          <h1>Проектирование <span>ОВиК и ВК</span> для домов, офисов и коммерческих объектов</h1>
           <p class="hero-text">
-            Проектирование систем отопления, вентиляции, кондиционирования, водоснабжения и канализации
-            для жилых и коммерческих объектов. Точные технические решения, соблюдение нормативов и
-            внимательный подход к каждой задаче.
+            Разрабатываю проекты отопления, вентиляции, кондиционирования, водоснабжения и канализации
+            с понятной логикой, аккуратной документацией и привязкой к реальным условиям объекта.
           </p>
 
           <div class="hero-actions">
             <a class="btn btn-primary" href="tel:+79324207085">Позвонить</a>
-            <a class="btn btn-success" href="https://wa.me/79324207085" target="_blank" rel="noopener noreferrer">WhatsApp</a>
-            <a class="btn btn-secondary" href="https://t.me/+79324207085" target="_blank" rel="noopener noreferrer">Telegram</a>
+            <a class="btn btn-secondary" href="portfolio.html">Посмотреть проекты</a>
+            <a class="btn btn-ghost" href="https://wa.me/79324207085" target="_blank" rel="noopener noreferrer">WhatsApp</a>
           </div>
 
-          <p style="margin-top:18px;" class="muted">Связь по телефону, WhatsApp и Telegram: +7 932 420-70-85</p>
+          <ul class="metric-strip">
+            <li><strong>10+</strong><span>лет опыта</span></li>
+            <li><strong>2D/3D</strong><span>рабочая документация</span></li>
+            <li><strong>НВ</strong><span>Нижневартовск и удалённо</span></li>
+          </ul>
         </div>
 
-        <div class="stack">
-          <div class="card">
-            <div class="stat">10+</div>
-            <div class="muted">лет практического опыта в проектировании инженерных систем</div>
-          </div>
-
-          <div class="card">
-            <ul class="list">
-              <li><span class="dot"></span><span>Проектирование ОВиК и ВК под задачи объекта и требования заказчика</span></li>
-              <li><span class="dot"></span><span>Техническая точность, профессиональный подход и внимание к деталям</span></li>
-              <li><span class="dot"></span><span>Удобная обратная связь и оперативное взаимодействие на всех этапах</span></li>
-            </ul>
-          </div>
+        <div class="hero-visual">
+          <article class="image-card tall-photo">
+            <img src="https://images.pexels.com/photos/3862135/pexels-photo-3862135.jpeg?auto=compress&cs=tinysrgb&w=1200" alt="Инженеры обсуждают чертежи проекта">
+          </article>
+          <article class="highlight-card">
+            <p class="mini-label">Фокус работы</p>
+            <h2>Не просто схема, а проект, который реально можно реализовать</h2>
+            <p>Техническая точность, удобство монтажа, логика трасс и нормальная коммуникация с заказчиком.</p>
+          </article>
         </div>
       </div>
     </section>
 
-    <section class="section" id="about">
+    <section class="section">
       <div class="container">
-        <div class="panel about-grid">
+        <div class="section-heading split-heading">
           <div>
-            <div class="section-head">
-              <h2>О специалисте</h2>
-              <p>Профессиональное проектирование инженерных систем с опорой на нормы, опыт и практичность решений.</p>
-            </div>
-            <p>
-              Раджик — инженер-проектировщик ОВиК и ВК с опытом работы более 10 лет.
-              Основной акцент в работе делается на надёжность инженерных решений, грамотную
-              компоновку систем, точность документации и соответствие действующим требованиям.
-            </p>
-            <ul class="ticks" style="margin-top:20px;">
-              <li>Проработка решений с учётом особенностей объекта и инженерных нагрузок</li>
-              <li>Подготовка проектной и рабочей документации в понятном и аккуратном виде</li>
-              <li>Ориентация на практическую реализацию, удобство эксплуатации и техническую обоснованность</li>
-            </ul>
+            <p class="eyebrow">Ключевые направления</p>
+            <h2>Что можно заказать</h2>
           </div>
+          <p>Проекты для новых объектов, реконструкции и точечной модернизации инженерных систем.</p>
+        </div>
 
-          <aside class="card">
-            <div class="section-head">
-              <h2 style="font-size:1.45rem;">Кратко</h2>
-              <p>Основная информация для быстрого знакомства.</p>
-            </div>
-            <ul class="contact-list">
-              <li><span class="label">Специализация</span><span class="value">ОВиК и ВК</span></li>
-              <li><span class="label">Опыт</span><span class="value">Более 10 лет</span></li>
-              <li><span class="label">Город</span><span class="value">Нижневартовск</span></li>
-              <li><span class="label">Связь</span><span class="value">Телефон, WhatsApp, Telegram</span></li>
-            </ul>
-          </aside>
+        <div class="feature-grid three-col">
+          <article class="feature-card">
+            <span class="feature-index">01</span>
+            <h3>ОВиК</h3>
+            <p>Отопление, вентиляция и кондиционирование с учётом режима эксплуатации, теплопритоков и архитектуры объекта.</p>
+          </article>
+          <article class="feature-card accent-card">
+            <span class="feature-index">02</span>
+            <h3>ВК</h3>
+            <p>Проектирование водоснабжения и канализации с понятной разводкой, узлами и корректной привязкой оборудования.</p>
+          </article>
+          <article class="feature-card">
+            <span class="feature-index">03</span>
+            <h3>Рабочая документация</h3>
+            <p>Подготовка комплектов для реализации проекта: планы, схемы, спецификации и пояснения без лишней воды.</p>
+          </article>
         </div>
       </div>
     </section>
 
-    <section class="section" id="services">
-      <div class="container">
-        <div class="panel">
-          <div class="section-head">
-            <h2>Услуги</h2>
-            <p>Комплексный подход к разработке инженерных решений для систем отопления, вентиляции, кондиционирования, водоснабжения и канализации.</p>
-          </div>
-
-          <div class="grid-5">
-            <article class="item">
-              <div class="icon">ОВ</div>
-              <strong>Проектирование ОВиК</strong>
-              <p>Разработка решений по отоплению, вентиляции и кондиционированию с учётом назначения объекта и режимов эксплуатации.</p>
-            </article>
-            <article class="item">
-              <div class="icon">ВК</div>
-              <strong>Проектирование ВК</strong>
-              <p>Системы водоснабжения и канализации с проработкой схем, трассировок и технически обоснованных решений.</p>
-            </article>
-            <article class="item">
-              <div class="icon">РД</div>
-              <strong>Проектная и рабочая документация</strong>
-              <p>Подготовка комплектов документации для реализации проекта в ясной, структурированной и профессиональной форме.</p>
-            </article>
-            <article class="item">
-              <div class="icon">EQ</div>
-              <strong>Подбор оборудования</strong>
-              <p>Подбор инженерных решений и оборудования с учётом эффективности, надёжности и параметров объекта.</p>
-            </article>
-            <article class="item">
-              <div class="icon">CN</div>
-              <strong>Консультации</strong>
-              <p>Помощь в выборе технических решений, анализ исходных данных и профессиональные рекомендации по системам.</p>
-            </article>
-          </div>
-        </div>
+    <section class="section band-section">
+      <div class="container showcase-grid">
+        <article class="image-card landscape-card">
+          <img src="https://images.pexels.com/photos/11269741/pexels-photo-11269741.jpeg?auto=compress&cs=tinysrgb&w=1200" alt="Работа с инженерными чертежами и проектной документацией">
+        </article>
+        <article class="info-panel">
+          <p class="eyebrow">Подход к работе</p>
+          <h2>Проект начинается с понимания объекта, а не с шаблона</h2>
+          <ul class="check-list">
+            <li>Анализ исходных данных и особенностей планировки</li>
+            <li>Подбор решений под бюджет и технические ограничения</li>
+            <li>Согласование ключевых узлов до выпуска документации</li>
+            <li>Удобная связь по телефону, WhatsApp и Telegram</li>
+          </ul>
+        </article>
       </div>
     </section>
 
-    <section class="section" id="advantages">
+    <section class="section">
       <div class="container">
-        <div class="panel">
-          <div class="section-head">
-            <h2>Преимущества</h2>
-            <p>То, за что ценят профессионального инженера-проектировщика: опыт, системность и точность.</p>
-          </div>
-
-          <div class="grid-5">
-            <article class="item"><strong>Более 10 лет опыта</strong><p>Практический опыт в проектировании инженерных систем и понимание реальных задач объектов.</p></article>
-            <article class="item"><strong>Индивидуальный подход</strong><p>Решения подбираются под особенности объекта, пожелания заказчика и технические ограничения.</p></article>
-            <article class="item"><strong>Соблюдение нормативов</strong><p>Внимание к действующим требованиям, логике проектирования и корректности инженерных решений.</p></article>
-            <article class="item"><strong>Техническая точность</strong><p>Аккуратная проработка документации, системность и внимание к инженерным деталям.</p></article>
-            <article class="item"><strong>Удобная связь</strong><p>Прямая коммуникация по телефону, WhatsApp и Telegram для быстрого согласования вопросов.</p></article>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <section class="section" id="steps">
-      <div class="container">
-        <div class="panel">
-          <div class="section-head">
-            <h2>Этапы работы</h2>
-            <p>Понятный и прозрачный процесс взаимодействия — от первого обращения до передачи документации.</p>
-          </div>
-
-          <div class="grid-5">
-            <article class="item"><strong>1. Консультация</strong><p>Обсуждение задачи, объекта, сроков и состава требуемых инженерных решений.</p></article>
-            <article class="item"><strong>2. Сбор данных</strong><p>Анализ исходной информации, технических условий и особенностей планировки объекта.</p></article>
-            <article class="item"><strong>3. Разработка проекта</strong><p>Формирование инженерных решений и подготовка необходимой проектной документации.</p></article>
-            <article class="item"><strong>4. Согласование</strong><p>Уточнение деталей, корректировка отдельных решений и согласование итогового варианта.</p></article>
-            <article class="item"><strong>5. Передача документации</strong><p>Подготовка и передача готового комплекта материалов для дальнейшей реализации.</p></article>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <section class="section" id="contacts">
-      <div class="container">
-        <div class="panel contacts-grid">
+        <div class="section-heading split-heading">
           <div>
-            <div class="section-head">
-              <h2>Контакты</h2>
-              <p>Свяжитесь удобным способом, чтобы обсудить задачу, объект и формат сотрудничества.</p>
-            </div>
-
-            <div class="hero-actions">
-              <a class="btn btn-primary" href="tel:+79324207085">Позвонить</a>
-              <a class="btn btn-success" href="https://wa.me/79324207085" target="_blank" rel="noopener noreferrer">Написать в WhatsApp</a>
-              <a class="btn btn-secondary" href="https://t.me/+79324207085" target="_blank" rel="noopener noreferrer">Написать в Telegram</a>
-            </div>
+            <p class="eyebrow">Преимущества</p>
+            <h2>Почему со мной удобно работать</h2>
           </div>
-
-          <aside class="card">
-            <ul class="contact-list">
-              <li><span class="label">Имя</span><span class="value">Раджик</span></li>
-              <li><span class="label">Должность</span><span class="value">Инженер-проектировщик ОВиК и ВК</span></li>
-              <li><span class="label">Город</span><span class="value">Нижневартовск</span></li>
-              <li><span class="label">Телефон</span><a class="value" href="tel:+79324207085">+7 932 420-70-85</a></li>
-              <li><span class="label">WhatsApp</span><a class="value" href="https://wa.me/79324207085" target="_blank" rel="noopener noreferrer">Открыть чат</a></li>
-              <li><span class="label">Telegram</span><a class="value" href="https://t.me/+79324207085" target="_blank" rel="noopener noreferrer">Открыть чат</a></li>
-            </ul>
-          </aside>
+          <p>Ставка на ясность, скорость согласований и проект, который не приходится перепридумывать на монтаже.</p>
         </div>
+
+        <div class="feature-grid four-col">
+          <article class="feature-card compact-card">
+            <h3>Техническая логика</h3>
+            <p>Решения строятся от реальных нагрузок, требований и удобства эксплуатации.</p>
+          </article>
+          <article class="feature-card compact-card">
+            <h3>Аккуратная подача</h3>
+            <p>Чертежи и документы оформляются чисто и читаемо без визуального мусора.</p>
+          </article>
+          <article class="feature-card compact-card">
+            <h3>Гибкость по задачам</h3>
+            <p>Можно подключиться как на полный объект, так и на отдельный раздел проекта.</p>
+          </article>
+          <article class="feature-card compact-card">
+            <h3>Прямая связь</h3>
+            <p>Без посредников: обсуждение вопросов идёт напрямую со специалистом.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section gallery-section">
+      <div class="container">
+        <div class="section-heading split-heading">
+          <div>
+            <p class="eyebrow">Визуальный контекст</p>
+            <h2>С чем чаще всего приходится работать</h2>
+          </div>
+          <a class="text-link" href="portfolio.html">Открыть портфолио</a>
+        </div>
+
+        <div class="gallery-grid">
+          <article class="gallery-card">
+            <img src="https://images.pexels.com/photos/6285154/pexels-photo-6285154.jpeg?auto=compress&cs=tinysrgb&w=1200" alt="Инженеры изучают чертежи">
+            <div>
+              <h3>Коммерческие помещения</h3>
+              <p>Проекты с координацией инженерных систем и согласованием рабочих решений.</p>
+            </div>
+          </article>
+          <article class="gallery-card">
+            <img src="https://images.pexels.com/photos/29086539/pexels-photo-29086539.jpeg?auto=compress&cs=tinysrgb&w=1200" alt="Воздуховод вентиляционной системы">
+            <div>
+              <h3>Вентиляция и воздуховоды</h3>
+              <p>Трассировка сетей, точки подключения, размещение оборудования и логика обслуживания.</p>
+            </div>
+          </article>
+          <article class="gallery-card">
+            <img src="https://images.pexels.com/photos/11269741/pexels-photo-11269741.jpeg?auto=compress&cs=tinysrgb&w=1200" alt="Работа с проектной линейкой по чертежу">
+            <div>
+              <h3>Рабочая документация</h3>
+              <p>Чёткие планы, спецификации и документы, с которыми можно идти в реализацию.</p>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section lead-section" id="lead-form">
+      <div class="container lead-grid">
+        <div class="lead-copy">
+          <p class="eyebrow">Форма заявки</p>
+          <h2>Оставьте задачу и получите быстрый ответ</h2>
+          <p>Форма не требует сервера: после отправки откроется WhatsApp с уже подготовленным сообщением.</p>
+          <div class="contact-points">
+            <a href="tel:+79324207085">Телефон: +7 932 420-70-85</a>
+            <a href="https://t.me/+79324207085" target="_blank" rel="noopener noreferrer">Telegram</a>
+          </div>
+        </div>
+
+        <form class="lead-form form-card" data-form-context="Главная страница">
+          <label>
+            <span>Ваше имя</span>
+            <input type="text" name="name" placeholder="Например, Алексей" required>
+          </label>
+          <label>
+            <span>Телефон</span>
+            <input type="tel" name="phone" placeholder="+7 9XX XXX-XX-XX" required>
+          </label>
+          <label>
+            <span>Тип объекта</span>
+            <input type="text" name="project" placeholder="Дом, офис, магазин, склад">
+          </label>
+          <label>
+            <span>Кратко о задаче</span>
+            <textarea name="message" placeholder="Что нужно спроектировать и какие исходные данные уже есть"></textarea>
+          </label>
+          <button class="btn btn-primary" type="submit">Отправить заявку</button>
+          <p class="form-note">После нажатия откроется чат WhatsApp с заполненным текстом заявки.</p>
+        </form>
       </div>
     </section>
   </main>
 
-  <footer class="footer">
-    <div class="container footer-inner">
-      <span>© <span id="year"></span> Раджик — инженер-проектировщик ОВиК и ВК</span>
-      <span>Нижневартовск</span>
+  <footer class="site-footer">
+    <div class="container footer-grid">
+      <div>
+        <a class="brand footer-brand" href="index.html">
+          <span class="brand-mark">R</span>
+          <span>
+            <strong>Раджик</strong>
+            <small>Инженер-проектировщик ОВиК и ВК</small>
+          </span>
+        </a>
+        <p>Проектирование инженерных систем для частных и коммерческих объектов в Нижневартовске и удалённо.</p>
+      </div>
+      <div>
+        <h3>Страницы</h3>
+        <a href="services.html">Услуги</a>
+        <a href="portfolio.html">Портфолио</a>
+        <a href="contacts.html">Контакты</a>
+      </div>
+      <div>
+        <h3>Связь</h3>
+        <a href="tel:+79324207085">+7 932 420-70-85</a>
+        <a href="https://wa.me/79324207085" target="_blank" rel="noopener noreferrer">WhatsApp</a>
+        <a href="https://t.me/+79324207085" target="_blank" rel="noopener noreferrer">Telegram</a>
+      </div>
     </div>
   </footer>
 
-  <a class="floating-contact" href="tel:+79324207085">Связаться</a>
-
-  <script>
-    document.getElementById("year").textContent = new Date().getFullYear();
-  </script>
+  <script src="script.js"></script>
 </body>
 </html>
